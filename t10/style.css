@@ -1,0 +1,208 @@
+h1{
+    color:#48525e;
+}
+
+.container{
+    background-color: #3e4751;
+    position: relative;
+    width: 50%;
+    height: 400px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.elements{
+    color: white;
+    background-color: #48525e;
+    border: 1px solid #747578;
+    padding: 40px ;
+}
+
+
+
+select{
+    margin-top: 20px ;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 35px;
+    background-color:#2e353c;
+    color: white;
+    border-radius: 5px;
+    border: 1px #bdbec1 solid;
+}
+
+.la{
+    padding-top: 14px;
+}
+
+.ba{
+    font-size: 30px;
+    padding-left: 170px;
+    padding-top: 5px;
+}
+
+.laba{
+    display: flex;
+}
+
+.weight{
+    display: flex;
+    flex-flow: row;
+    padding-top: 20px;
+}
+
+.size{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+    /* для элемента input c type="checkbox" */
+    .custom-checkbox {
+        
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+      
+      }
+  
+      /* для элемента label, связанного с .custom-checkbox */
+      .custom-checkbox+label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+        margin-right: 10px;
+        
+      }
+  
+      /* создание в label псевдоэлемента before со следующими стилями */
+      .custom-checkbox+label::before {
+        content: '';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+        flex-grow: 0;
+        background-color: #313a42;
+        border: 1px solid #adb5bd;
+        margin-right: 0.5em;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+      }
+  
+
+  
+      /* стили для активного чекбокса (при нажатии на него) */
+
+  
+      /* стили для чекбокса, находящегося в фокусе */
+  
+      /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+      
+  
+      /* стили для чекбокса, находящегося в состоянии checked */
+      .custom-checkbox:checked+label::before {
+        border-color: #313a42;
+        background-color: #313a42;
+        content: "\2713";
+        color: greenyellow;
+        border: 1px solid #adb5bd;
+      }
+  
+      /* стили для чекбокса, находящегося в состоянии disabled */
+      .custom-checkbox:disabled+label::before {
+        background-color: #e9ecef;
+      }
+
+
+
+
+input[type=range] {
+  width: 100%;
+  margin-top: 25px;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background: #353c45;
+
+
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+}
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -7px;
+  width: 20px;
+  height: 20px;
+  background: #5fb9a5;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type=range]::-moz-range-track {
+  background: #353c45;
+  border: 0.2px solid rgba(1, 1, 1, 0.9);
+  border-radius: 1.3px;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  background: #28bc45;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 6.8px 0;
+  color: transparent;
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+}
+input[type=range]::-ms-fill-lower {
+  background: #006090;
+  border: 0.2px solid rgba(1, 1, 1, 0.9);
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-fill-upper {
+  background: #0071a9;
+  border: 0.2px solid rgba(1, 1, 1, 0.9);
+  border-radius: 2.6px;
+}
+input[type=range]::-ms-thumb {
+  width: 22px;
+  height: 22px;
+  background: #28bc45;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #0071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #0082c3;
+}
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align:auto) {
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+  input[type=range] {
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
+  }
+}
