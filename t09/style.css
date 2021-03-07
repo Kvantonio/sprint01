@@ -12,6 +12,9 @@ img{
 
 @media only screen and (max-width: 640px) {
    .grid-container {
+
+    border: 1px solid black;
+    border-radius: 10px;
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
   grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
@@ -46,9 +49,11 @@ img{
 
 @media only screen and (min-width: 640px) {
     .grid-container {
+        border: 1px solid black;
+    border-radius: 10px;
         display: grid;
-        grid-template-columns: 14.3% 3.1% 23.3% 17% 3.2%;
-        grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+        grid-template-columns: 24.3% 15.1% 23.3% 25% 6.2%;
+        grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 5% 7.5%;
         gap: 4px 4px;
         grid-template-areas:
           "one one one . ."
@@ -75,7 +80,8 @@ img{
 
 @media only screen and (min-width: 1366px) {
     .grid-container {
-        
+        border: 1px solid black;
+    border-radius: 10px;
         display: grid;
         grid-template-columns: 5% 5% 5% 5% 5% 5% 0.6% 7.9% 6.5% 2.5% 2% 14% 2.4% 4.1% 5% 5% 5% 5%;
         grid-template-rows: 11.7% 9.7% 10% 9.6% 11.2% 8.8% 10% 10%;

@@ -1,208 +1,326 @@
 h1{
-    color:#48525e;
+  color:#3e4751;
+  text-align: center;
 }
-
-.container{
-    background-color: #3e4751;
-    position: relative;
-    width: 50%;
-    height: 400px;
-    margin: 20px;
-    padding: 20px;
-}
-
-.elements{
-    color: white;
-    background-color: #48525e;
-    border: 1px solid #747578;
-    padding: 40px ;
-}
-
-
-
-select{
-    margin-top: 20px ;
-    margin-bottom: 20px;
-    width: 200px;
-    height: 35px;
-    background-color:#2e353c;
-    color: white;
-    border-radius: 5px;
-    border: 1px #bdbec1 solid;
-}
-
-.la{
-    padding-top: 14px;
-}
-
-.ba{
-    font-size: 30px;
-    padding-left: 170px;
-    padding-top: 5px;
-}
-
-.laba{
-    display: flex;
-}
-
-.weight{
-    display: flex;
-    flex-flow: row;
-    padding-top: 20px;
-}
-
-.size{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    width: 200px;
-}
-
-    /* для элемента input c type="checkbox" */
-    .custom-checkbox {
-        
-        position: absolute;
-        z-index: -1;
-        opacity: 0;
-      
-      }
+body{
   
-      /* для элемента label, связанного с .custom-checkbox */
-      .custom-checkbox+label {
-        display: inline-flex;
-        align-items: center;
-        user-select: none;
-        margin-right: 10px;
-        
-      }
+  font-size: 15px;
+  font-weight: 400;
   
-      /* создание в label псевдоэлемента before со следующими стилями */
-      .custom-checkbox+label::before {
-        content: '';
-        display: inline-block;
-        width: 1em;
-        height: 1em;
-        flex-shrink: 0;
-        flex-grow: 0;
-        background-color: #313a42;
-        border: 1px solid #adb5bd;
-        margin-right: 0.5em;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 50% 50%;
-      }
   
-
-  
-      /* стили для активного чекбокса (при нажатии на него) */
-
-  
-      /* стили для чекбокса, находящегося в фокусе */
-  
-      /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-      
-  
-      /* стили для чекбокса, находящегося в состоянии checked */
-      .custom-checkbox:checked+label::before {
-        border-color: #313a42;
-        background-color: #313a42;
-        content: "\2713";
-        color: greenyellow;
-        border: 1px solid #adb5bd;
-      }
-  
-      /* стили для чекбокса, находящегося в состоянии disabled */
-      .custom-checkbox:disabled+label::before {
-        background-color: #e9ecef;
-      }
-
-
-
-
-input[type=range] {
-  width: 100%;
-  margin-top: 25px;
-  background-color: transparent;
-  -webkit-appearance: none;
 }
-input[type=range]:focus {
+.setting{ 
+  font-family: BlinkMacSystemFont, "Segoe UI", Roboto;
+  color: #cfd0d0;
+  width: 700px;
+  height: 700px;
+  background-color:#3e4751;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.setting_left{
+  background-color: #48525e;
+  width: 510px;
+  height: 450px;
+  margin-top: auto;
+  margin-bottom: auto;
+  border:1px solid #5c6269;
+  float:left;
+}
+.setting_rigth{
+  background-color: #36383D;
+  width: 70px;
+  height: 250px;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  border-radius: 0px 15px 15px 0px;
+  float:left;
+}
+.setting_left_left{
+  width: 255px;
+  height: 450px;
+  float: left;
+}
+.setting_left_rigth{
+   width: 255px;
+  height: 450px;
+  float: left;
+  
+}
+.lang{
+  background-color: white;
+  width: 3px;
+  height: 4px;
+  position: absolute;
+  margin-top:20px;
+  margin-left: 30px;
+}
+.language{
+  width: 200px;
+  height: 30px;
+  padding: 0px 5px;
   outline: none;
+  appearance:none;
+  cursor:pointer;
+  background-color: #2b343b;
+  color: #cfd0d0;
 }
-input[type=range]::-webkit-slider-runnable-track {
-  background: #353c45;
-
-
+.weigth{
+  position: relative;
+  top:70px;
+}
+.weigth-box{
   width: 100%;
-  height: 3px;
-  cursor: pointer;
+  position: relative;
+  padding: 10px 0px;
+  left:30px;
 }
-input[type=range]::-webkit-slider-thumb {
-  margin-top: -7px;
+.weigth-box input{
+  margin:0px;
+  position: absolute;
+  opacity:0;
+  z-index: -1;
+}
+.weigth-box label{
+  margin:0px 10px 0px 0px;
+}
+.weigth-box input+label{
+  display: inline-flex;
+  user-select: none;
+}
+.weigth-box input + label::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    margin-right: 1em;
+    border: 1px solid #aeb0b4;
+    background-color: #2b343b;
+    cursor: pointer;
+    padding: 1px;
+    justify-content: center;
+}
+.weigth-box input:checked + label::after {
+    position: absolute;
+    content: "\2713";
+    padding-left: 0.25em;
+    color: #60bba6;
+    cursor: pointer;
+}
+.weigth-box input:not(:disabled):active + label:hover::before {
+    border-color: #60bba6;
+}
+.size{
+  width: 10px;
+  height: 10px;
+  margin-top: 130px;
+  margin-left: 30px;
+}
+.lang1{
+  position: absolute;
+  border: solid #cfd0d0;
+  border-width: 0px 2px 2px 0px;
+  display: inline-block;
+  padding: 4px;
+  transform: rotate(45deg);
+  left: 175px;
+  top:8px;
+}
+.language:focus{
+  border-color: #2c6ed8;
+  border-radius: 1px;
+  box-shadow: 0px 0px 2px 1px #2c6ed8;
+}
+.image{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 13px;
+  width: 45px;
+  height: 45px;
+}
+img{
+  width: 45px;
+  height: 45px;
+  
+}
+.darkui{
+  width: 200px;
+  height: 30px;
+  margin-left: 20px;
+  margin-right: 15px;
+  margin-top:70px;
+  position: relative;
+  display: inline-block;
+}
+.content_text{
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.tt{
+  margin-bottom: 22px;
+}
+
+.content_txt{
+    margin-top: 50px;
+    margin-left: 20px;
+}
+.box-color{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 230px;
+  height: 30px;
+}
+.color-box{
+  position: relative;
+  border-radius: 1px solid #BCC4D6;
+  border-radius: 50%;
+  appearance:none;
+  cursor:pointer;
+  margin-left: 10px;
+  margin-top: 3px;
+  user-select: none;
+  outline: none;
+  height: 25px;
+  width: 25px;
+}
+.color-box::before{
+  position: absolute;
+  font-style: italic;
+  content:"\2713";
+  font-size: 15px;
+  opacity:0;
+  left:4px;
+  top:2px;
+  color:white; 
+}
+.color-box:checked::before{
+  opacity:1;
+}
+.blue{
+  background-color: #4875bb;
+}
+.yellow{
+  background-color: #ddd968;
+}
+.pink{
+  background-color: #cf62cb;
+}
+.orange{
+  background-color: #d2815e;
+}
+.green{
+  background-color: #60bba6;
+}
+#text{
+  margin-top:8px;
+}
+#size{
+  margin-top: 30px;
+}
+.size input{
+  appearance:none;
+  height: 2px;
+  width: 180px;
+  background-color: #2b343b;
+  border-radius: 1px;
+  cursor: pointer;
+  margin: 15px 0;
+  
+}
+.size input::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #60bba6;
+    border-radius: 10px;
+}
+.size input:focus {
+    outline: none;
+}
+.size_A{
+  width: 180px;
+  height: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+.size_A .a{
+  display: inline-block;
   width: 20px;
   height: 20px;
-  background: #5fb9a5;
-  border: 0;
-  border-radius: 50px;
-  cursor: pointer;
-  -webkit-appearance: none;
+  float: left;
+  position: absolute;
+  font-size: 20px;
+}
+.size_A .A{
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-left: 160px;
+  font-size: 30px;
+}
+.label_ui{
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 65px;
+  top:-5px;
 }
 
-input[type=range]::-moz-range-track {
-  background: #353c45;
-  border: 0.2px solid rgba(1, 1, 1, 0.9);
-  border-radius: 1.3px;
-  width: 100%;
-  height: 8.4px;
+.label_ui input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ui {
+  position: absolute;
   cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #36383D;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
-input[type=range]::-moz-range-thumb {
-  width: 22px;
-  height: 22px;
-  background: #28bc45;
-  border: 0;
-  border-radius: 50px;
-  cursor: pointer;
+
+.ui:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #60bba6;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
-input[type=range]::-ms-track {
-  background: transparent;
-  border-color: transparent;
-  border-width: 6.8px 0;
-  color: transparent;
-  width: 100%;
-  height: 8.4px;
-  cursor: pointer;
+
+input:checked + .ui {
+  background-color: #4696ed;
 }
-input[type=range]::-ms-fill-lower {
-  background: #006090;
-  border: 0.2px solid rgba(1, 1, 1, 0.9);
-  border-radius: 2.6px;
+
+input:focus + .ui {
+  box-shadow: 0 0 1px #60bba6;
 }
-input[type=range]::-ms-fill-upper {
-  background: #0071a9;
-  border: 0.2px solid rgba(1, 1, 1, 0.9);
-  border-radius: 2.6px;
+
+input:checked + .ui:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+
 }
-input[type=range]::-ms-thumb {
-  width: 22px;
-  height: 22px;
-  background: #28bc45;
-  border: 0;
-  border-radius: 50px;
-  cursor: pointer;
-  margin-top: 0px;
-  /*Needed to keep the Edge thumb centred*/
+.ui.round {
+  border-radius: 34px;
 }
-input[type=range]:focus::-ms-fill-lower {
-  background: #0071a9;
-}
-input[type=range]:focus::-ms-fill-upper {
-  background: #0082c3;
-}
-/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
-how to remove the virtical space around the range input in IE*/
-@supports (-ms-ime-align:auto) {
-  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
-  input[type=range] {
-    margin: 0;
-    /*Edge starts the margin from the thumb, not the track as other browsers do*/
-  }
+
+.ui.round:before {
+  border-radius: 50%;
 }
