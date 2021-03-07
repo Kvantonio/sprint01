@@ -113,12 +113,14 @@ body{
 .weigth-box input:not(:disabled):active + label:hover::before {
     border-color: #60bba6;
 }
+
 .size{
   width: 10px;
   height: 10px;
   margin-top: 130px;
   margin-left: 30px;
 }
+
 .lang1{
   position: absolute;
   border: solid #cfd0d0;
